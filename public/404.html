@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Stack Overflow Question Explorer</title>
+    <script>
+      // Redirect GitHub Pages 404 to root index.html preserving route in hash
+      var path = window.location.pathname;
+      var repo = '/STACK-OVERFLOW-QUESTION-EXPLORER';
+      if (path.startsWith(repo)) {
+        var subRoute = path.slice(repo.length);
+        if (subRoute && subRoute !== '/') {
+          window.location.replace(repo + '/#' + subRoute + window.location.search);
+        } else {
+          window.location.replace(repo + '/');
+        }
+      } else {
+        window.location.replace('/');
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to Stack Overflow Question Explorer...</p>
+  </body>
+</html>
